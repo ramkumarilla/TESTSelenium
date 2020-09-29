@@ -15,8 +15,8 @@ namespace SeleniumExample
         public void SearchForSeleniumHQ()
         {
             //Find folder with Chrome Driver (chromedriver.exe)
-            var browserDriverPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
+            var directory = Directory.GetCurrentDirectory();
+            var browserDriverPath = directory + "/../../../../";
             //Set Chrome to start with maximized window
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--start-maximized");
